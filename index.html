@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestion des étudiants</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>bonjour </h1>
+
+    <h1>Gestion des étudiants</h1>
+
+    <form id="formulaire">
+        <input type="text" id="nom" placeholder="Nom">
+        <input type="text" id="prenom" placeholder="Prénom">
+        <input type="number" id="age" placeholder="Âge">
+
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <input type="text" id="recherche" placeholder="Rechercher un étudiant">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Âge</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody id="listeEtudiants">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
