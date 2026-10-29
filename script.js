@@ -63,3 +63,22 @@ formulaire.addEventListener("submit", function(event) {
         ligne.remove();
     });
 });
+let recherche = document.getElementById("recherche");
+
+recherche.addEventListener("input", function() {
+
+    let texte = recherche.value.toLowerCase();
+    let lignes = listeEtudiants.getElementsByTagName("tr");
+
+    for (let i = 0; i < lignes.length; i++) {
+
+        let nom = lignes[i].children[0].textContent.toLowerCase();
+        let prenom = lignes[i].children[1].textContent.toLowerCase();
+
+        if (nom.includes(texte) || prenom.includes(texte)) {
+            lignes[i].style.display = "";
+        } else {
+            lignes[i].style.display = "none";
+        }
+    }
+});
